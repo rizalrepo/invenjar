@@ -4,6 +4,8 @@ $page = 'dashboard';
 include_once '../layout/topbar.php';
 
 $a = $con->query("SELECT COUNT(*) AS total FROM barang WHERE stok != 0")->fetch_array();
+$b = $con->query("SELECT COUNT(*) AS total FROM penerimaan")->fetch_array();
+$c = $con->query("SELECT COUNT(*) AS total FROM pengeluaran")->fetch_array();
 ?>
 <div class="page-content">
 
@@ -21,7 +23,7 @@ $a = $con->query("SELECT COUNT(*) AS total FROM barang WHERE stok != 0")->fetch_
     <!-- end page title -->
 
     <div class="row">
-        <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+        <div class="col-12">
             <div class="card">
                 <div class="card-body">
                     <div class="d-flex align-items-start my-2">
@@ -35,6 +37,44 @@ $a = $con->query("SELECT COUNT(*) AS total FROM barang WHERE stok != 0")->fetch_
                         <div class="flex-1 overflow-hidden">
                             <h5 class="font-size-16 mb-1">Data Barang Tersedia</h5>
                             <p class="text-truncate mb-0"><?= $a['total'] ?> Data</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+            <div class="card">
+                <div class="card-body">
+                    <div class="d-flex align-items-start my-2">
+                        <div class="me-3 align-self-center">
+                            <div class="avatar-sm font-size-20">
+                                <span class="avatar-title bg-soft-danger text-danger rounded">
+                                    <i class="bi bi-building-fill-down"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="flex-1 overflow-hidden">
+                            <h5 class="font-size-16 mb-1">Data Penerimaan Barang</h5>
+                            <p class="text-truncate mb-0"><?= $b['total'] ?> Data</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+            <div class="card">
+                <div class="card-body">
+                    <div class="d-flex align-items-start my-2">
+                        <div class="me-3 align-self-center">
+                            <div class="avatar-sm font-size-20">
+                                <span class="avatar-title bg-soft-danger text-danger rounded">
+                                    <i class="fas fa-building-circle-arrow-right"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="flex-1 overflow-hidden">
+                            <h5 class="font-size-16 mb-1">Data Pengeluaran Barang</h5>
+                            <p class="text-truncate mb-0"><?= $c['total'] ?> Data</p>
                         </div>
                     </div>
                 </div>
