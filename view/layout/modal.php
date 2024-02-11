@@ -243,6 +243,14 @@
             }
         });
 
+        $(".tahunPenerimaan").change(function() {
+            if ($(".tahunPenerimaan option:selected").val() != '') {
+                $('.bulanPenerimaan').prop('required', true);
+            } else {
+                $('.bulanPenerimaan').removeAttr('required');
+            }
+        });
+
         $('#selectKeperluan').select2({
             dropdownParent: $('#lapPengeluaran')
         });
@@ -255,11 +263,27 @@
             }
         });
 
+        $(".tahunPengeluaran").change(function() {
+            if ($(".tahunPengeluaran option:selected").val() != '') {
+                $('.bulanPengeluaran').prop('required', true);
+            } else {
+                $('.bulanPengeluaran').removeAttr('required');
+            }
+        });
+
         $(".bulanRekap").change(function() {
             if ($(".bulanRekap option:selected").val() != '') {
                 $('.tahunRekap').prop('required', true);
             } else {
                 $('.tahunRekap').removeAttr('required');
+            }
+        });
+
+        $(".tahunRekap").change(function() {
+            if ($(".tahunRekap option:selected").val() != '') {
+                $('.bulanRekap').prop('required', true);
+            } else {
+                $('.bulanRekap').removeAttr('required');
             }
         });
     });
