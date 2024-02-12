@@ -4,7 +4,7 @@
             <div class="text-center txt-footer fw-bold">
                 <script>
                     document.write(new Date().getFullYear())
-                </script> © Sistem Informasi Inventory Jaringan Telkom Banjarbaru
+                </script> © Sistem Informasi Inventory Jaringan PT. TELKOM AKSES BANJARBARU
             </div>
         </div>
     </div>

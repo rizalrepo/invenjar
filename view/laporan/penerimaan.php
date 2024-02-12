@@ -70,19 +70,19 @@ ob_start();
         <table border="0" cellspacing="0" cellpadding="0" width="100%">
             <tr>
                 <td align="center">
-                    <img src="<?= base_url('assets/images/logo.png') ?>" align="left" height="100">
+                    <img src="<?= base_url('assets/images/logo.png') ?>" align="left" width="100">
                 </td>
                 <td align="center">
-                    <h1>PT. Telkom Akses Banjarbaru</h1>
-                    <h6>Jl. Ir. P. M. Noor, Sungai Ulin, Kec. Banjarbaru Utara, Kota Banjarbaru, Kalimantan Selatan 70714</h6>
+                    <h1>PT. TELKOM AKSES BANJARBARU</h1>
+                    <h6>Jl. PM Noor, Kemuning, Kec. Banjarbaru Selatan, Kota Banjar Baru, Kalimantan Selatan 70714</h6>
                 </td>
                 <td align="center">
-                    <img src="<?= base_url('assets/images/pelengkap.png') ?>" align="right" height="100">
+                    <img src="<?= base_url('assets/images/pelengkap.png') ?>" align="right" width="100">
                 </td>
             </tr>
         </table>
     </div>
-    <hr size="2px" color="black">
+    <hr style="margin-top: -5px">
 
     <h4 align="center">
         <?= $label ?><br>
